@@ -1,0 +1,651 @@
+/* Luxury Styling for Paris Jewellers Jewellery Catalog Screen */
+
+.listing-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 40px 24px;
+  box-sizing: border-box;
+}
+
+/* 1. Header banner section */
+.listing-header {
+  border-bottom: 1px solid #f1f1f1;
+  padding-bottom: 32px;
+  text-align: left;
+  margin-bottom: 40px;
+  box-sizing: border-box;
+}
+
+.listing-sub {
+  font-family: "Montserrat", sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.35em;
+  color: #c3a475;
+  text-transform: uppercase;
+}
+
+.listing-title {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 28px;
+  font-weight: 500;
+  color: #23221f;
+  margin: 8px 0 0 0;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+@media (min-width: 768px) {
+  .listing-title {
+    font-size: 38px;
+  }
+}
+
+.listing-desc {
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  color: #71717a;
+  font-weight: 300;
+  max-width: 768px;
+  line-height: 1.6;
+  margin: 10px 0 0 0;
+}
+
+.search-badge-notice {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 16px;
+  background-color: rgba(14, 61, 47, 0.05);
+  border: 1px solid rgba(14, 61, 47, 0.1);
+  padding: 10px 14px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  color: #c3a475;
+  border-radius: 2px;
+  max-width: 440px;
+  box-sizing: border-box;
+}
+
+.search-badge-clear {
+  background: none;
+  border: none;
+  font-family: "Montserrat", sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+  text-decoration: underline;
+  margin-left: auto;
+  color: #c3a475;
+  outline: none;
+  padding: 4px;
+}
+
+.search-badge-clear:hover {
+  color: #c3a475;
+}
+
+/* Dual Column Split Layout */
+.listing-dual-column {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  align-items: start;
+}
+
+@media (min-width: 1024px) {
+  .listing-dual-column {
+    grid-template-columns: repeat(12, 1fr);
+  }
+}
+
+/* 2. Sidebar Filters Panel */
+.sidebar-filters-panel {
+  background-color: #ffffff;
+  padding: 24px;
+  border: 1px solid #f1f1f1;
+  border-radius: 2px;
+  box-shadow: 0 1px 3px rgba(35, 34, 31, 0.04);
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  text-align: left;
+  box-sizing: border-box;
+}
+
+@media (min-width: 1024px) {
+  .sidebar-filters-panel {
+    grid-column: span 3;
+  }
+}
+
+.filter-top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #f1f1f1;
+  padding-bottom: 16px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.filter-heading {
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: #23221f;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 0;
+}
+
+.filter-reset-action {
+  background: none;
+  border: none;
+  font-family: "Montserrat", sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #c3a475;
+  border-bottom: 1px solid rgba(14, 61, 47, 0.2);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 0;
+  outline: none;
+  transition: all 0.15s ease;
+}
+
+.filter-reset-action:hover {
+  color: #c3a475;
+  border-color: #c3a475;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.filter-label-txt {
+  font-family: "Montserrat", sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  color: #9ca3af;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.filter-buttons-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.filter-pill-btn {
+  width: 100%;
+  border: none;
+  background: none;
+  text-align: left;
+  padding: 6px 8px;
+  border-radius: 2px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.filter-pill-btn.pill-active {
+  background-color: #c3a475;
+  color: #faf7f2;
+  font-weight: 700;
+  padding-left: 12px;
+}
+
+.filter-pill-btn.pill-inactive {
+  color: #4b5563;
+}
+
+.filter-pill-btn.pill-inactive:hover {
+  background-color: #faf7f2;
+  color: #c3a475;
+}
+
+.filter-sig-pill-btn {
+  width: 100%;
+  border: none;
+  background: none;
+  text-align: left;
+  padding: 6px 8px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  border-left: 2px solid transparent;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.filter-sig-pill-btn.sig-active {
+  background-color: rgba(14, 61, 47, 0.08);
+  color: #c3a475;
+  border-left-color: #c3a475;
+  font-weight: 700;
+}
+
+.filter-sig-pill-btn.sig-inactive {
+  color: #4b5563;
+}
+
+.filter-sig-pill-btn.sig-inactive:hover {
+  background-color: #faf7f2;
+  color: #c3a475;
+}
+
+.metals-bubble-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.metal-tag-btn {
+  padding: 6px 12px;
+  border: 1px solid #e4e4e7;
+  font-family: "Montserrat", sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  border-radius: 2px;
+  transition: all 0.2s ease;
+  background-color: #fafaf9;
+  cursor: pointer;
+  outline: none;
+  color: #71717a;
+  text-transform: uppercase;
+}
+
+.metal-tag-btn:hover {
+  border-color: #c3a475;
+  color: #23221f;
+}
+
+.metal-tag-btn.tag-active {
+  background-color: #23221f;
+  border-color: #23221f;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.price-row-spread {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-family: "Montserrat", sans-serif;
+}
+
+.price-val-loud {
+  font-size: 12px;
+  font-weight: 700;
+  color: #c3a475;
+}
+
+.slider-input-range {
+  width: 100%;
+  height: 4px;
+  accent-color: #c3a475;
+  background-color: #e4e4e7;
+  border-radius: 2px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  margin-top: 4px;
+}
+
+.ethical-checkbox-row {
+  border-top: 1px solid #f1f1f1;
+  padding-top: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
+}
+
+.ethical-checklist-label {
+  font-size: 12px;
+  color: #23221f;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  text-align: left;
+}
+
+.ethical-square-box {
+  width: 18px;
+  height: 18px;
+  accent-color: #c3a475;
+  cursor: pointer;
+}
+
+/* Main Catalogue listing grids block */
+.listing-main-content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+@media (min-width: 1024px) {
+  .listing-main-content {
+    grid-column: span 9;
+  }
+}
+
+.listing-top-controls {
+  background-color: #ffffff;
+  padding: 16px;
+  border: 1px solid #f1f1f1;
+  border-radius: 2px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  text-align: left;
+  box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+  .listing-top-controls {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.showing-count-txt {
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  color: #71717a;
+  font-weight: 300;
+}
+
+.showing-count-txt strong {
+  color: #1a1a1a;
+  font-weight: 700;
+}
+
+.sorters-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .sorters-group {
+    width: auto;
+  }
+}
+
+.sorters-label {
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  color: #71717a;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-left: auto;
+}
+
+@media (min-width: 768px) {
+  .sorters-label {
+    margin-left: 0;
+  }
+}
+
+.sorters-select {
+  background-color: #fcfbfa;
+  border: 1px solid #e4e4e7;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  color: #3f3f46;
+  font-weight: 500;
+  padding: 6px 12px;
+  border-radius: 2px;
+  cursor: pointer;
+  outline: none;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+  .sorters-select {
+    width: 180px;
+  }
+}
+
+.sorters-select:focus {
+  border-color: #c3a475;
+}
+
+/* Catalog responsive wrapping */
+.grid-responsive-wrap {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+@media (min-width: 640px) {
+  .grid-responsive-wrap {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid-responsive-wrap {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Not found card state */
+.not-found-card {
+  background-color: #ffffff;
+  border: 1px dashed #d1d5db;
+  padding: 80px 24px;
+  border-radius: 2px;
+  text-align: center;
+  max-width: 500px;
+  margin: 40px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+  box-sizing: border-box;
+}
+
+.not-found-icon-large {
+  color: #c3a475;
+  width: 48px;
+  height: 48px;
+}
+
+.not-found-title {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 22px;
+  font-weight: 600;
+  color: #23221f;
+  margin: 0;
+}
+
+.not-found-desc {
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  color: #9ca3af;
+  max-width: 380px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.not-found-reset-btn {
+  background-color: #c3a475;
+  color: #ffffff;
+  border: none;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 12px 28px;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  outline: none;
+}
+
+.not-found-reset-btn:hover {
+  background-color: #145442;
+}
+
+/* Elegant Auto Loader Anchor and Pulse Loader Styles */
+.auto-loader-sentinel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 40px 16px;
+  margin-top: 16px;
+  border-top: 1px dashed #f1f1f1;
+}
+
+.pulse-loader {
+  display: flex;
+  gap: 8px;
+}
+
+.loader-dot {
+  width: 10px;
+  height: 10px;
+  background-color: #c3a475;
+  border-radius: 50%;
+  animation: pulseGradual 1.4s infinite ease-in-out both;
+}
+
+.loader-dot:nth-child(1) {
+  animation-delay: -0.32s;
+}
+
+.loader-dot:nth-child(2) {
+  animation-delay: -0.16s;
+}
+
+.loader-text-accent {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 16px;
+  font-style: italic;
+  color: #c3a475;
+  margin: 0;
+  letter-spacing: 0.05em;
+}
+
+/* Decorative Skeletons for Paris Catalog Loading on scroll */
+.skeleton-product-card {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  border: 1px solid #eaebec;
+  border-radius: 2px;
+  overflow: hidden;
+  box-sizing: border-box;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.01);
+  position: relative;
+}
+
+.skeleton-image {
+  aspect-ratio: 1 / 1;
+  background: #fbf9f6;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.skeleton-logo-hint {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 24px;
+  font-style: italic;
+  font-weight: 300;
+  color: #ebdcb9;
+  opacity: 0.7;
+  letter-spacing: 0.12em;
+  animation: softPulse 2s infinite ease-in-out;
+}
+
+@keyframes softPulse {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 0.8; }
+}
+
+.skeleton-meta-box {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex-grow: 1;
+}
+
+.skeleton-text {
+  background: linear-gradient(90deg, #f3f2ee 25%, #eae8e2 50%, #f3f2ee 75%);
+  background-size: 200% 100%;
+  border-radius: 2px;
+  animation: shineShimmer 1.6s infinite linear;
+}
+
+.skeleton-shimmer-brand {
+  width: 35%;
+  height: 8px;
+}
+
+.skeleton-shimmer-title {
+  width: 80%;
+  height: 14px;
+  margin-top: 4px;
+}
+
+.skeleton-shimmer-price {
+  width: 55%;
+  height: 12px;
+  margin-top: 8px;
+}
+
+@keyframes shineShimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+@keyframes pulseGradual {
+  0%, 80%, 100% {
+    transform: scale(0);
+    opacity: 0.3;
+  }
+  40% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+

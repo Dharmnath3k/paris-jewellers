@@ -1,0 +1,256 @@
+/* Luxury Dark Styling for Paris Jewellers Footer matching Reference Mockup */
+
+.brand-footer {
+  background-color: #161616; /* Pristine velvet black background */
+  color: #cccccc;
+  padding: 64px 0 40px 0;
+  border-top: 1px solid #222222;
+  text-align: left;
+  user-select: none;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  position: relative;
+}
+
+.footer-grid-row {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  border-bottom: 1px solid #282828;
+  padding-bottom: 40px;
+  box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+  .footer-grid-row {
+    grid-template-columns: repeat(4, 1fr);
+    padding: 0 48px 40px 48px;
+  }
+}
+
+.col-group {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.col-heading {
+  font-family: "Montserrat", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  color: #c5a880; /* Warm champagne gold */
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.col-links {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12.5px;
+  font-weight: 400;
+  color: #bfbfbf;
+}
+
+.col-links span {
+  cursor: pointer;
+  transition: color 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  display: inline-block;
+  width: fit-content;
+}
+
+.col-links span:hover {
+  color: #c5a880;
+}
+
+.col-links a {
+  color: #bfbfbf;
+  text-decoration: none;
+  transition: color 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  margin-top: 2px;
+}
+
+.col-links a:hover {
+  color: #c5a880;
+}
+
+.contact-clickable-span {
+  transition: color 0.15s ease;
+}
+.contact-clickable-span:hover {
+  color: #c5a880;
+}
+
+/* Social Strip Icons with Outline design */
+.social-strip {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+  align-items: center;
+}
+
+.social-circle-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid #333333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  text-decoration: none;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.social-circle-btn:hover {
+  background-color: #333333;
+  color: #c3a475;
+  border-color: #c3a475;
+  transform: translateY(-2px);
+}
+
+/* Custom premium logo payment cards row */
+.payment-badges {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.custom-payment-card {
+  width: 50px;
+  height: 31px;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease, filter 0.2s ease;
+  user-select: none;
+  cursor: pointer;
+}
+
+.custom-payment-card:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.05);
+}
+
+.payment-svg {
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+  display: block;
+}
+
+/* Footer bottom copyright section */
+.footer-ground-wrap {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 32px 24px 0 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+  .footer-ground-wrap {
+    flex-direction: row;
+    padding: 32px 48px 0 48px;
+  }
+}
+
+.copyright-line {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  color: #888888;
+}
+
+.copyright-sublinks {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.copyright-link {
+  cursor: pointer;
+  transition: color 0.15s ease;
+}
+
+.copyright-link:hover {
+  color: #c5a880;
+}
+
+.copyright-year-box {
+  font-family: "Montserrat", sans-serif;
+  font-size: 11px;
+  color: #888888;
+}
+
+/* Floating custom support chat widget bubble: bottom-right circular black */
+.footer-chat-widget-pillow {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 100;
+  background-color: #121212;
+  border: 1px solid #2e2e2e;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-sizing: border-box;
+}
+
+.footer-chat-widget-pillow:hover {
+  background-color: #000000;
+  border-color: #c5a880;
+  transform: scale(1.08);
+}
+
+/* Floating back-to-top gold circle widget: slightly stacked above chat bubble */
+.footer-scroll-top-btn {
+  position: fixed;
+  bottom: 86px;
+  right: 24px;
+  z-index: 100;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #c5a880; /* Warm luxury gold */
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.18);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-sizing: border-box;
+}
+
+.footer-scroll-top-btn:hover {
+  background-color: #bfa075;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+}

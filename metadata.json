@@ -1,0 +1,6 @@
+{
+  "name": "Paris Jewellers Clone",
+  "description": "A high-fidelity luxury jewelry storefront clone of Paris Jewellers, featuring interactive collection filters, a custom metal and size configurator, interactive store locators, cart and checkout flows, and their iconic Canadian diamond stories.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

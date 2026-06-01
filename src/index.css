@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Montserrat:wght@200;300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Cormorant Garamond", serif;
+  --font-sans: "Montserrat", sans-serif;
+  
+  --color-emerald-deep: #c3a475;
+  --color-emerald-light: #b08f5e;
+  --color-gold-champagne: #c3a475;
+  --color-gold-dark: #b08f5e;
+  --color-gold-light: #e6dfd3;
+  --color-cream-bg: #faf7f2;
+  --color-charcoal-brown: #23221f;
+  --color-rose-champagne: #ecd3cb;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-cream-bg);
+    color: var(--color-charcoal-brown);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-serif);
+  }
+}
+
+/* Custom gorgeous scrollbar for luxury brand feel */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #c3a475;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #b08f5e;
+}

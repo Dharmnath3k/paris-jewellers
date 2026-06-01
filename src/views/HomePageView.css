@@ -1,0 +1,887 @@
+/* Luxury Styling for Paris Jewellers Home View */
+
+.home-root {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  color: #23221f;
+  font-family: "Montserrat", sans-serif;
+  box-sizing: border-box;
+}
+
+/* 2. Three Grid Promotion Cards Block */
+.promo-grid-section {
+  padding: 40px 24px;
+  margin: 0 auto;
+  max-width: 1440px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.promo-cards-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+@media (min-width: 768px) {
+  .promo-cards-row {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.promo-card-item {
+  position: relative;
+  height: 380px;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  border: 1px solid #f3f4f6;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 1px 3px rgba(35, 34, 31, 0.05);
+}
+
+.promo-card-item:hover {
+  box-shadow: 0 10px 25px rgba(35, 34, 31, 0.1);
+}
+
+.promo-card-bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.promo-card-item:hover .promo-card-bg-img {
+  transform: scale(1.05);
+}
+
+.promo-card-overlay-vignette {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+.promo-card-subtitle {
+  font-family: "Montserrat", sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: #ffffff;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+@media (min-width: 768px) {
+  .promo-card-subtitle {
+    font-size: 13px;
+  }
+}
+
+.promo-card-title {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  color: #ffffff;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  margin: 4px 0 0 0;
+}
+
+@media (min-width: 768px) {
+  .promo-card-title {
+    font-size: 24px;
+  }
+}
+
+.promo-card-cta-btn {
+  font-family: "Montserrat", sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: #ffffff;
+  padding-bottom: 4px;
+  border: none;
+  background: none;
+  border-bottom: 2px solid #ffffff;
+  margin-top: 12px;
+  cursor: pointer;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.promo-card-item:hover .promo-card-cta-btn {
+  color: #dfcbab;
+  border-color: #dfcbab;
+}
+
+/* 3. Gold Jewellery Landscape Banner */
+.gold-landscape-banner-section {
+  padding: 32px 0;
+  margin: 0;
+  max-width: 100%;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.gold-landscape-banner-backdrop {
+  position: relative;
+  height: 320px;
+  border-radius: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 24px 16px;
+  box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+  .gold-landscape-banner-backdrop {
+    height: 450px;
+    padding: 0 48px;
+    border-radius: 0;
+  }
+}
+
+.gold-landscape-banner-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  transition: transform 4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.gold-landscape-banner-backdrop:hover .gold-landscape-banner-bg {
+  transform: scale(1.02);
+}
+
+.gold-landscape-overlay-content {
+  position: relative;
+  z-index: 10;
+  text-align: left;
+  max-width: 440px;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.gold-landscape-title {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .gold-landscape-title {
+    font-size: 36px;
+  }
+}
+
+.gold-landscape-desc {
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 1.6;
+  color: #e5e7eb;
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .gold-landscape-desc {
+    font-size: 14px;
+  }
+}
+
+.gold-landscape-btn-container {
+  padding-top: 10px;
+}
+
+.gold-landscape-cta {
+  background-color: rgba(0, 0, 0, 0.25);
+  border: 2px solid rgba(255, 255, 255, 0.9);
+  color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  padding: 12px 28px;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  box-sizing: border-box;
+}
+
+.gold-landscape-cta:hover {
+  border-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.15);
+  color: #c3a475;
+}
+
+@media (min-width: 768px) {
+  .gold-landscape-cta {
+    font-size: 11px;
+  }
+}
+
+/* 4. Pearl Collection Shelf block */
+.pearl-shelf-section {
+  padding: 64px 24px;
+  margin: 0 auto;
+  max-width: 1440px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.pearl-shelf-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eae5db;
+  padding-bottom: 20px;
+  margin-bottom: 32px;
+}
+
+.pearl-shelf-title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  font-weight: 850;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #171717;
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .pearl-shelf-title {
+    font-size: 27px;
+  }
+}
+
+.pearl-shelf-all-btn {
+  background-color: #000000;
+  color: #ffffff;
+  border: none;
+  font-family: "Montserrat", sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  padding: 11px 24px;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  box-sizing: border-box;
+}
+
+.pearl-shelf-all-btn:hover {
+  background-color: #27272a;
+}
+
+@media (min-width: 768px) {
+  .pearl-shelf-all-btn {
+    font-size: 11px;
+  }
+}
+
+/* Pearl slider elements layout */
+.pearl-slider-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.pearl-slider-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1px solid #eae5db;
+  background-color: #ffffff;
+  color: #1a1a1a;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.pearl-slider-arrow:hover {
+  background-color: #000000;
+  color: #ffffff;
+  border-color: #000000;
+}
+
+.pearl-slider-arrow.left {
+  position: absolute;
+  left: -8px;
+  top: 40%;
+  transform: translateY(-50%);
+  z-index: 10;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.pearl-slider-arrow.right {
+  position: absolute;
+  right: -8px;
+  top: 40%;
+  transform: translateY(-50%);
+  z-index: 10;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+@media (min-width: 1024px) {
+  .pearl-slider-arrow.left {
+    left: -20px;
+  }
+  .pearl-slider-arrow.right {
+    right: -20px;
+  }
+}
+
+.pearl-slider-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.pearl-slider-track {
+  display: flex;
+  gap: 24px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 24px;
+  /* Hide scrollbar for premium custom layout */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
+}
+
+.pearl-slider-track::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
+}
+
+.pearl-slide-item {
+  flex: 0 0 100%;
+  max-width: 100%;
+  scroll-snap-align: start;
+}
+
+@media (min-width: 640px) {
+  .pearl-slide-item {
+    flex: 0 0 calc(50% - 12px);
+    max-width: calc(50% - 12px);
+  }
+}
+
+@media (min-width: 1024px) {
+  .pearl-slide-item {
+    flex: 0 0 calc(25% - 18px);
+    max-width: calc(25% - 18px);
+  }
+}
+
+.pearl-slider-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.pearl-slider-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #eae5db;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.pearl-slider-dot.active {
+  background-color: #000000;
+  transform: scale(1.3);
+}
+
+/* 5. As Seen In Row block */
+.as-seen-in-shingle {
+  padding: 56px 24px;
+  background-color: #faf9f6;
+  border-top: 1px solid #eae5db;
+  border-bottom: 1px solid #eae5db;
+  text-align: center;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.as-seen-in-label {
+  font-family: "Montserrat", sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: #a1a1aa;
+  display: block;
+  margin-bottom: 24px;
+}
+
+@media (min-width: 768px) {
+  .as-seen-in-label {
+    font-size: 14px;
+  }
+}
+
+.as-seen-in-slider-container {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 12px 0;
+}
+
+/* Elegant soft vignetting fade on side tracks */
+.as-seen-in-slider-container::before,
+.as-seen-in-slider-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 120px;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.as-seen-in-slider-container::before {
+  left: 0;
+  background: linear-gradient(to right, #faf9f6 0%, rgba(250, 249, 246, 0) 100%);
+}
+
+.as-seen-in-slider-container::after {
+  right: 0;
+  background: linear-gradient(to left, #faf9f6 0%, rgba(250, 249, 246, 0) 100%);
+}
+
+.as-seen-in-slider-track {
+  display: flex;
+  width: max-content;
+  align-items: center;
+  animation: logo-marquee-slide 34s linear infinite;
+}
+
+.as-seen-in-slider-container:hover .as-seen-in-slider-track {
+  animation-play-state: paused;
+}
+
+.as-seen-in-logos-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 72px;
+  padding: 0 36px;
+  flex-shrink: 0;
+  opacity: 0.8;
+}
+
+@keyframes logo-marquee-slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-33.3333%);
+  }
+}
+
+.logo-item-serif {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 800;
+  color: #000000;
+  font-size: 20px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.logo-item-italic {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  color: #6b7280;
+  font-size: 16px;
+  letter-spacing: 0.15em;
+  font-style: italic;
+  text-transform: lowercase;
+}
+
+.logo-item-double {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.logo-sublabel {
+  font-family: "Montserrat", sans-serif;
+  font-size: 7px;
+  letter-spacing: 0.4em;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #a1a1aa;
+}
+
+.logo-mainlabel {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.logo-item-bold-italic {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 900;
+  color: #000000;
+  font-size: 22px;
+  font-style: italic;
+  letter-spacing: 0.05em;
+}
+
+.logo-item-mono {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  color: #000000;
+  font-size: 12px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.logo-item-mono span {
+  font-size: 7px;
+  font-weight: 400;
+  color: #a1a1aa;
+  letter-spacing: 0.3em;
+  margin-bottom: 2px;
+}
+
+.logo-item-heavy {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+  color: #27272a;
+  font-size: 20px;
+  letter-spacing: -0.02em;
+}
+
+/* 6. Store exterior showroom booking */
+.store-interior-section {
+  padding: 64px 24px;
+  margin: 0 auto;
+  max-width: 1440px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.store-showroom-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #f1f1f1;
+  box-shadow: 0 1px 3px rgba(35, 34, 31, 0.04);
+}
+
+@media (min-width: 1024px) {
+  .store-showroom-grid {
+    grid-template-columns: repeat(12, 1fr);
+  }
+}
+
+.store-showroom-img-pane {
+  height: 360px;
+  background-color: #fafafa;
+  overflow: hidden;
+  width: 100%;
+}
+
+@media (min-width: 1024px) {
+  .store-showroom-img-pane {
+    grid-column: span 7;
+    height: 480px;
+  }
+}
+
+.store-showroom-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.store-booking-container {
+  padding: 24px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  box-sizing: border-box;
+}
+
+@media (min-width: 1024px) {
+  .store-booking-container {
+    grid-column: span 5;
+    padding: 40px;
+  }
+}
+
+.booking-title {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 20px;
+  color: #09090b;
+  font-weight: 400;
+  line-height: 1.3;
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .booking-title {
+    font-size: 30px;
+  }
+}
+
+.booking-desc {
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  color: #71717a;
+  font-weight: 300;
+  line-height: 1.6;
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .booking-desc {
+    font-size: 14px;
+  }
+}
+
+/* Newsletter block */
+.newsletter-subscription-box {
+  padding-top: 8px;
+  border-top: 1px solid #f3f4f6;
+}
+
+.newsletter-trigger-btn {
+  background: none;
+  border: none;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: underline;
+  color: #09090b;
+  cursor: pointer;
+  text-align: left;
+  display: block;
+  width: 100%;
+  padding: 4px 0;
+}
+
+.newsletter-trigger-btn:hover {
+  color: #c3a475;
+}
+
+.newsletter-input-field {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #dfdacd;
+  padding: 8px 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  color: #23221f;
+  outline: none;
+  margin-top: 6px;
+  box-sizing: border-box;
+}
+
+.newsletter-input-field:focus {
+  border-color: #c3a475;
+}
+
+.newsletter-success-notice {
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  color: #c3a475;
+  font-weight: 700;
+  margin: 0;
+  padding: 4px 0;
+}
+
+/* Action button items */
+.booking-action-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-top: 16px;
+}
+
+.booking-btn-khaki {
+  width: 100%;
+  background-color: #c5a880;
+  border: none;
+  color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  padding: 14px 24px;
+  border-radius: 2px;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.25s ease;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.booking-btn-khaki:hover {
+  background-color: #b0946b;
+}
+
+/* 7. Feature line row badges styled as luxurious ticker scroller / marquee */
+.trust-badges-bar {
+  background-color: #faf9f6;
+  border-top: 1px solid #eae5db;
+  border-bottom: 1px solid #eae5db;
+  padding: 18px 0;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.trust-badges-slider-container {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* Vignette fades on the sides of the slider */
+.trust-badges-slider-container::before,
+.trust-badges-slider-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 80px;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.trust-badges-slider-container::before {
+  left: 0;
+  background: linear-gradient(to right, #faf9f6 0%, rgba(250, 249, 246, 0) 100%);
+}
+
+.trust-badges-slider-container::after {
+  right: 0;
+  background: linear-gradient(to left, #faf9f6 0%, rgba(250, 249, 246, 0) 100%);
+}
+
+.trust-badges-slider-track {
+  display: flex;
+  width: max-content;
+  align-items: center;
+  animation: trust-marquee-slide 28s linear infinite;
+}
+
+.trust-badges-slider-container:hover .trust-badges-slider-track {
+  animation-play-state: paused;
+}
+
+.trust-badges-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 64px;
+  padding: 0 32px;
+  flex-shrink: 0;
+}
+
+.trust-badge-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #3f3f46;
+  white-space: nowrap;
+}
+
+@media (min-width: 768px) {
+  .trust-badge-item {
+    font-size: 12px;
+    letter-spacing: 0.08em;
+  }
+}
+
+.trust-icon {
+  width: 16px;
+  height: 16px;
+  color: #c5a880; /* Premium Champagne Gold Accent */
+  stroke-width: 1.8;
+}
+
+@keyframes trust-marquee-slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-33.3333%);
+  }
+}
+
+/* Back to top scroll widget */
+.top-scroll-arrow-btn {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 40;
+  background-color: #181c1a;
+  border: 1px solid rgba(195, 164, 117, 0.3);
+  color: #ffffff;
+  width: 38px;
+  height: 38px;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  padding: 0;
+  outline: none;
+}
+
+.top-scroll-arrow-btn:hover {
+  background-color: #c3a475;
+  color: #181c1a;
+}

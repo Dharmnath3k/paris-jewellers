@@ -1,0 +1,68 @@
+/* App Global Container and Currency sidebar Switcher */
+
+.app-root-container {
+  min-height: 100vh;
+  background-color: #faf7f2;
+  display: flex;
+  flex-direction: column;
+  font-family: "Montserrat", sans-serif;
+  user-select: none;
+  overflow-x: hidden;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.main-content-layout {
+  flex-grow: 1;
+  box-sizing: border-box;
+}
+
+/* Sidebar CAD/USD Currency Toggle Pinned on Left Margin as seen in official preview */
+.currency-sidebar-pill {
+  position: fixed;
+  left: 0;
+  top: 28%;
+  z-index: 40;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #1a1a1a;
+  border: 1px solid rgba(195, 164, 117, 0.3);
+  border-left: none;
+  border-radius: 0 4px 4px 0;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  user-select: none;
+}
+
+.currency-sidebar-btn {
+  padding: 8px 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-align: center;
+  width: 40px;
+  border: none;
+  background: none;
+  color: #d1d5db;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.currency-sidebar-btn.btn-active {
+  background-color: #c3a475;
+  color: #171717;
+  font-weight: 800;
+}
+
+.currency-sidebar-btn.btn-inactive:hover {
+  background-color: #c3a475;
+  color: #171717;
+}
+
+.currency-sidebar-btn.border-sep {
+  border-bottom: 1px solid rgba(14, 61, 47, 0.5);
+}

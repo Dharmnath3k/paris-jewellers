@@ -1,0 +1,338 @@
+/* Product Card Pure CSS Layout */
+
+.product-card-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  border: 1px solid #f1f1f1;
+  border-radius: 2px;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-sizing: border-box;
+}
+
+.product-card-container:hover {
+  box-shadow: 0 10px 30px rgba(35, 34, 31, 0.06);
+  border-color: rgba(195, 164, 117, 0.4);
+}
+
+/* 1. Badge stack */
+.badges-stack {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  pointer-events: none;
+}
+
+.badge-item {
+  color: #fbf9f6;
+  font-family: "Montserrat", sans-serif;
+  font-size: 8px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 2px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.badge-item.ethical-badge {
+  background-color: #c3a475;
+}
+
+.badge-item.bestseller-badge {
+  background-color: #c3a475;
+}
+
+.badge-item.arrival-badge {
+  background-color: #ecd3cb;
+  color: #23221f;
+  font-weight: 700;
+}
+
+.badge-item.discount-badge {
+  background-color: #dc2626;
+  font-weight: 700;
+}
+
+/* 2. Wishlist heart */
+.wishlist-absolute-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 10;
+  width: 32px;
+  height: 32px;
+  border-radius: 9999px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border: 1px solid #f1f1f1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  outline: none;
+  padding: 0;
+}
+
+.wishlist-absolute-btn:hover {
+  background-color: #ffffff;
+}
+
+.wishlist-heart-icon {
+  width: 17px;
+  height: 17px;
+  color: #9ca3af;
+  transition: color 0.15s ease, fill 0.15s ease;
+}
+
+.wishlist-absolute-btn:hover .wishlist-heart-icon {
+  color: #ef4444;
+}
+
+.wishlist-heart-icon.filled-active {
+  fill: #ef4444;
+  color: #ef4444;
+}
+
+/* Image container */
+.product-image-frame {
+  aspect-ratio: 1 / 1;
+  background-color: #fcfbfa;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+  width: 100%;
+}
+
+.product-image-shown {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.product-card-container:hover .product-image-shown {
+  transform: scale(1.04);
+}
+
+.hover-configure-reveal {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.3) 0%, transparent 100%);
+  padding: 14px 0;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-card-container:hover .hover-configure-reveal {
+  opacity: 1;
+}
+
+.hover-configure-text {
+  font-family: "Montserrat", sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #faf7f2;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* Description Block */
+.product-details-block {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  text-align: left;
+  box-sizing: border-box;
+}
+
+.collection-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #9ca3af;
+  margin-bottom: 6px;
+}
+
+.rating-inline {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.collection-star-icon {
+  width: 11px;
+  height: 11px;
+  color: #c3a475;
+  fill: #c3a475;
+}
+
+.rating-number-score {
+  color: #23221f;
+  font-weight: 700;
+}
+
+/* Product title link */
+.product-name-heading {
+  font-family: "Montserrat", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  line-height: 1.45;
+  color: #23221f;
+  margin: 0 0 10px 0;
+  cursor: pointer;
+  transition: color 0.15s ease;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  height: 38px;
+  text-decoration: none;
+}
+
+.product-name-heading:hover {
+  color: #c3a475;
+}
+
+/* Metals selector bubble block */
+.metal-selector-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.metal-txt {
+  font-family: "Montserrat", sans-serif;
+  font-size: 9px;
+  color: #a1a1aa;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 500;
+}
+
+.metal-bubbles {
+  display: flex;
+  gap: 7px;
+}
+
+.metal-bubble-btn {
+  width: 14px;
+  height: 14px;
+  border-radius: 9999px;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  outline: none;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-sizing: border-box;
+}
+
+.metal-bubble-btn.yellow-gold {
+  background-color: #dfca9a;
+}
+
+.metal-bubble-btn.rose-gold {
+  background-color: #e2bab1;
+}
+
+.metal-bubble-btn.platinum {
+  background-color: #fafbfb;
+  border: 1px solid #d1d5db;
+}
+
+.metal-bubble-btn.silver {
+  background-color: #e5e5e5;
+}
+
+.metal-bubble-btn.white-gold {
+  background-color: #ece9df;
+}
+
+.metal-bubble-btn.bubble-active {
+  box-shadow: 0 0 0 2px #ffffff, 0 0 0 3.5px #c3a475;
+  transform: scale(1.15);
+}
+
+.metal-bubble-btn.bubble-inactive {
+  opacity: 0.55;
+  transform: scale(0.9);
+}
+
+/* Footer elements */
+.card-footer {
+  margin-top: auto;
+  padding-top: 10px;
+  border-t: 1px solid #f9f9f9;
+  box-sizing: border-box;
+}
+
+.price-row {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.price-current {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14.5px;
+  font-weight: 700;
+  color: #18181b;
+}
+
+.price-original {
+  font-family: "Montserrat", sans-serif;
+  font-size: 11px;
+  color: #a1a1aa;
+  text-decoration: line-through;
+}
+
+.currency-tag-badge {
+  font-family: "Montserrat", sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  color: #c3a475;
+  background-color: #faf6f0;
+  padding: 2px 6px;
+  border-radius: 2px;
+  margin-left: auto;
+  text-transform: uppercase;
+}
+
+.finance-subtext {
+  font-family: "Montserrat", sans-serif;
+  font-size: 10px;
+  color: #71717a;
+  margin: 5px 0 0 0;
+  font-weight: 300;
+  letter-spacing: 0.01em;
+}
+
+.finance-subtext-bold {
+  color: #c3a475;
+  font-weight: 600;
+}

@@ -1,0 +1,533 @@
+/* Premium Customs CSS for Paris Jewellers CheckoutView page */
+
+.checkout-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 40px 24px;
+  box-sizing: border-box;
+}
+
+/* Success Slate Confirmation Layout */
+.checkout-success-slate {
+  max-width: 500px;
+  margin: 80px auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  box-sizing: border-box;
+}
+
+.success-shield-circle {
+  width: 80px;
+  height: 80px;
+  background-color: #c3a475;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  color: #c3a475;
+  box-shadow: 0 10px 20px rgba(14, 61, 47, 0.15);
+  border: 8px solid rgba(14, 61, 47, 0.05);
+}
+
+.success-header-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.success-badge-tag {
+  font-family: "Montserrat", sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: #c3a475;
+  background-color: rgba(14, 61, 47, 0.05);
+  padding: 6px 12px;
+  border-radius: 2px;
+  text-transform: uppercase;
+  display: inline-block;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.success-title-gorgeous {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 24px;
+  font-weight: 500;
+  color: #23221f;
+  margin: 0;
+  line-height: 1.3;
+}
+
+@media (min-width: 768px) {
+  .success-title-gorgeous {
+    font-size: 30px;
+  }
+}
+
+.success-body-p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  line-height: 1.6;
+  color: #71717a;
+  font-weight: 300;
+  margin: 0;
+}
+
+/* Invoice details Card receipt */
+.invoice-receipt-card {
+  background-color: #ffffff;
+  border: 1px solid #e4e4e7;
+  padding: 20px;
+  border-radius: 2px;
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+.invoice-header-row {
+  display: flex;
+  justify-content: space-between;
+  font-family: "Montserrat", sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #71717a;
+  border-bottom: 1px solid #f1f1f1;
+  padding-bottom: 12px;
+  margin: 0;
+}
+
+.invoice-order-no {
+  color: #c3a475;
+  font-family: "JetBrains Mono", monospace;
+  font-weight: 700;
+}
+
+.invoice-specs-scent {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+}
+
+.invoice-spec-item {
+  display: flex;
+  justify-content: space-between;
+  color: #71717a;
+  font-weight: 300;
+}
+
+.invoice-spec-item span:nth-child(2) {
+  font-weight: 600;
+  color: #23221f;
+}
+
+.invoice-specs-divider {
+  border-top: 1px dashed #e4e4e7;
+  height: 1px;
+  width: 100%;
+  margin: 4px 0;
+}
+
+.invoice-total-row {
+  display: flex;
+  justify-content: space-between;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #c3a475;
+  align-items: baseline;
+}
+
+.invoice-total-row span:nth-child(2) {
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.success-notice-pillow {
+  background-color: #fbf9f6;
+  padding: 16px;
+  border: 1px solid rgba(195, 164, 117, 0.15);
+  border-radius: 2px;
+  display: flex;
+  gap: 12px;
+  text-align: left;
+  box-sizing: border-box;
+}
+
+.success-notice-msg {
+  font-family: "Montserrat", sans-serif;
+  font-size: 11px;
+  line-height: 1.5;
+  color: #71717a;
+  font-weight: 300;
+  margin: 0;
+}
+
+.success-home-cta-btn {
+  width: 100%;
+  background-color: #c3a475;
+  color: #ffffff;
+  border: none;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 14px 24px;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: all 0.2s;
+  outline: none;
+  margin-top: 8px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.success-home-cta-btn:hover {
+  background-color: #124d3c;
+}
+
+/* Page Layout headers */
+.checkout-title-header {
+  border-bottom: 1px solid #f1f1f1;
+  padding-bottom: 20px;
+  text-align: left;
+  margin-bottom: 32px;
+  box-sizing: border-box;
+}
+
+.checkout-title-sub {
+  font-family: "Montserrat", sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: #c3a475;
+  text-transform: uppercase;
+}
+
+.checkout-title-h1 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 24px;
+  font-weight: 500;
+  color: #23221f;
+  margin: 4px 0 0 0;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+@media (min-width: 768px) {
+  .checkout-title-h1 {
+    font-size: 32px;
+  }
+}
+
+/* Split Column structures grid */
+.checkout-split-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  text-align: left;
+}
+
+@media (min-width: 1024px) {
+  .checkout-split-grid {
+    grid-template-columns: repeat(12, 1fr);
+  }
+}
+
+.checkout-inputs-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+@media (min-width: 1024px) {
+  .checkout-inputs-panel {
+    grid-column: span 8;
+  }
+}
+
+/* Input Fields Box Blocks */
+.checkout-brick-station {
+  background-color: #ffffff;
+  border: 1px solid #f1f1f1;
+  padding: 24px;
+  border-radius: 2px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  box-sizing: border-box;
+}
+
+.checkout-station-title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.20em;
+  color: #23221f;
+  border-bottom: 1px solid #f1f1f1;
+  padding-bottom: 12px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Row Grid divisions inside standard blocks */
+.input-row-halves {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+@media (min-width: 768px) {
+  .input-row-halves {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.input-row-thirds {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+@media (min-width: 768px) {
+  .input-row-thirds {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Label & Input styling configuration rules */
+.input-control-glove {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  text-align: left;
+}
+
+.input-label-tag {
+  font-family: "Montserrat", sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: #9ca3af;
+  text-transform: uppercase;
+}
+
+.checkout-styled-input {
+  width: 100%;
+  background-color: #fbf9f6;
+  border: 1px solid #e4e4e7;
+  border-radius: 2px;
+  padding: 10px 12px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  color: #23221f;
+  outline: none;
+  transition: all 0.15s ease;
+  box-sizing: border-box;
+  font-weight: 500;
+}
+
+.checkout-styled-input:focus {
+  border-color: #c3a475;
+  background-color: #ffffff;
+}
+
+.select-container-pillow {
+  position: relative;
+  display: block;
+}
+
+.select-arrow-deco {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #c3a475;
+}
+
+/* Payments tabs selection mechanisms */
+.payment-tab-selector {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  border-bottom: 1px solid #f1f1f1;
+  padding-bottom: 16px;
+}
+
+.payment-tab-btn {
+  padding: 12px;
+  border: 1px solid #e4e4e7;
+  border-radius: 2px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background-color: #ffffff;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  outline: none;
+  color: #71717a;
+  box-sizing: border-box;
+}
+
+.payment-tab-btn.tab-active {
+  border-color: #c3a475;
+  background-color: rgba(14, 61, 47, 0.04);
+  color: #c3a475;
+  box-shadow: inset 0 0 0 1px #c3a475;
+}
+
+.payment-tab-btn.tab-inactive:hover {
+  border-color: #c3a475;
+  color: #23221f;
+}
+
+.promotional-payment-callout {
+  background-color: #fafaf9;
+  border: 1px dashed #e4e4e7;
+  padding: 16px;
+  border-radius: 2px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  text-align: left;
+  box-sizing: border-box;
+}
+
+.promotional-p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 11px;
+  line-height: 1.5;
+  color: #71717a;
+  font-weight: 300;
+  margin: 0;
+}
+
+/* Summary layout columns right side */
+.checkout-summary-column {
+  background-color: #ffffff;
+  padding: 24px;
+  border: 1px solid #f1f1f1;
+  border-radius: 2px;
+  box-shadow: 0 1px 3px rgba(35, 34, 31, 0.04);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  box-sizing: border-box;
+  text-align: left;
+  height: fit-content;
+}
+
+@media (min-width: 1024px) {
+  .checkout-summary-column {
+    grid-column: span 4;
+  }
+}
+
+.summary-items-basket {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-height: 220px;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+.basket-item-row {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  font-size: 12px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.basket-item-img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border: 1px solid #f1f1f1;
+  border-radius: 2px;
+  shrink: 0;
+}
+
+.basket-item-p-meta {
+  flex-grow: 1;
+  min-width: 0;
+}
+
+.basket-item-name {
+  font-weight: 600;
+  color: #23221f;
+  margin: 0;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.basket-item-details {
+  font-size: 9px;
+  color: #9ca3af;
+  font-weight: 300;
+  display: block;
+}
+
+.basket-item-cost {
+  font-weight: 700;
+  color: #c3a475;
+  font-family: "JetBrains Mono", monospace;
+}
+
+/* Submit order actions CTA trigger */
+.place-order-cta-btn {
+  width: 100%;
+  background-color: #c3a475;
+  color: #ffffff;
+  border: none;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 16px 20px;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  box-shadow: 0 4px 12px rgba(14, 61, 47, 0.15);
+  outline: none;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.place-order-cta-btn:hover {
+  background-color: #124d3c;
+}
+
+.place-order-cta-btn.btn-disabled {
+  background-color: #a1a1aa;
+  pointer-events: none;
+  cursor: default;
+  box-shadow: none;
+}

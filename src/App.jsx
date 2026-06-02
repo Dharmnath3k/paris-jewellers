@@ -8,12 +8,34 @@ import CartView from "./views/CartPageView";
 import CheckoutView from "./views/CheckoutPageView";
 import StoryView from "./views/BrandStoryPageView";
 import StoreLocatorView from "./views/StoreLocatorPageView";
+import LoginPageView from "./views/LoginPageView";
+import RegistrationPageView from "./views/RegistrationPageView";
+import OrderStatusPageView from "./views/OrderStatusPageView";
 import "./App.css";
 
 import { productsData } from "./data/products";
 
 export default function App() {
   const [activeRoute, setActiveRoute] = useState("home");
+  const [currentUser, setCurrentUser] = useState(() => {
+    try {
+      const saved = localStorage.getItem("paris_cl_current_user");
+      return saved ? JSON.parse(saved) : null;
+    } catch (_) {
+      return null;
+    }
+  });
+
+  const handleLoginSuccess = (user) => {
+    setCurrentUser(user);
+    localStorage.setItem("paris_cl_current_user", JSON.stringify(user));
+  };
+
+  const handleLogout = () => {
+    setCurrentUser(null);
+    localStorage.removeItem("paris_cl_current_user");
+    handleRouteChange("home");
+  };
   const [selectedProductId, setSelectedProductId] = useState(null);
   const [searchQuery, setSearchQuery] = useState("");
   const [initialCategory, setInitialCategory] = useState(undefined);
@@ -182,6 +204,8 @@ export default function App() {
         onSearchQuery={handleSearchTrigger}
         currency={currency}
         onCurrencyChange={handleCurrencyChange}
+        currentUser={currentUser}
+        onLogout={handleLogout}
       />
 
       {/* Primary Rendering Workspace based on active state routes */}
@@ -244,6 +268,27 @@ export default function App() {
         {activeRoute === "story" && <StoryView />}
 
         {activeRoute === "locator" && <StoreLocatorView />}
+
+        {activeRoute === "login" && (
+          <LoginPageView 
+            onLoginSuccess={handleLoginSuccess} 
+            onRouteChange={handleRouteChange} 
+          />
+        )}
+
+        {activeRoute === "register" && (
+          <RegistrationPageView 
+            onRouteChange={handleRouteChange} 
+          />
+        )}
+
+        {activeRoute === "orders" && (
+          <OrderStatusPageView 
+            currentUser={currentUser} 
+            onLogout={handleLogout}
+            onRouteChange={handleRouteChange}
+          />
+        )}
       </main>
 
       {/* Dynamic Aesthetic Footer Section */}

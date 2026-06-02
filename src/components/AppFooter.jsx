@@ -23,6 +23,7 @@ export default function Footer({ onRouteChange }) {
           <div className="col-links">
             <span onClick={() => handleNavClick("story")}>Our Story</span>
             <span onClick={() => handleNavClick("locator")}>Find A Store</span>
+            <span onClick={() => handleNavClick("login")} className="font-bold text-[#c5a880]">Member Login & Registry</span>
             <span onClick={() => alert("Stay updated with latest brand announcements, lookbooks, and media highlights.")}>Press</span>
             <span onClick={() => alert("View and apply eligible promo discounts during checkout.")}>Promo Offers & Exlusions</span>
             <span onClick={() => handleNavClick("story")}>Careers</span>
@@ -49,6 +50,7 @@ export default function Footer({ onRouteChange }) {
             CUSTOMER CARE
           </h4>
           <div className="col-links">
+            <span onClick={() => handleNavClick("orders")} className="font-bold text-[#c5a880]">Track Order Status</span>
             <span onClick={() => alert("Review frequently asked questions regarding insured shipping and lifetime warranties.")}>FAQ</span>
             <span onClick={() => alert("We offer a 30-day protected return or exchange for items in original unworn state with security tags intact.")}>Returns & Exchanges</span>
             <span onClick={() => alert("Complimentary expedited insured shipping on checkout values above $75 within Canada.")}>Shipping Policy</span>

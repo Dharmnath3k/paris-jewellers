@@ -77,6 +77,35 @@ export default function CheckoutView({ cart, onClearCart }) {
       setIsSuccess(true);
       const generatedNo = "PJ-IN-2026-" + Math.floor(100000 + Math.random() * 900000);
       setGeneratedOrderNumber(generatedNo);
+
+      // Save order in localStorage so it can be tracked live in OrderStatusPageView
+      try {
+        const existingOrders = JSON.parse(localStorage.getItem("paris_cl_orders") || "[]");
+        const firstCartItem = cart[0];
+        
+        const newOrder = {
+          orderNumber: generatedNo,
+          email: email.toLowerCase(),
+          name: `${firstName} ${lastName}`,
+          date: new Date().toISOString().split('T')[0], // YYYY-MM-DD
+          productName: firstCartItem ? firstCartItem.product.name : "Luxury Solitaire Setting",
+          selectedMetal: firstCartItem ? firstCartItem.selectedMetal : "18Kt Yellow Gold",
+          price: firstCartItem ? firstCartItem.product.price : subtotal,
+          totalBilled: grandTotal,
+          imageUrl: firstCartItem && firstCartItem.product.images ? firstCartItem.product.images[0] : "https://images.unsplash.com/photo-1605100804763-247f67b3557e?q=80&w=600&auto=format&fit=crop",
+          status: "pending", // initial status
+          address: address,
+          city: city,
+          pinCode: pinCode,
+          courierName: "Blue Dart Insured Safe-Transit"
+        };
+        
+        existingOrders.unshift(newOrder);
+        localStorage.setItem("paris_cl_orders", JSON.stringify(existingOrders));
+      } catch (e) {
+        console.error("Local order persistence error:", e);
+      }
+
       onClearCart();
     }, 2800); // simulated Razorpay gateway latency
   };

@@ -8,11 +8,9 @@ export default function ProductCard({
   onProductClick,
   onToggleWishlist,
   isWishlisted,
-  currency,
+  currency
 }) {
-  const [selectedMetalColor, setSelectedMetalColor] = useState(
-    product.metals[0],
-  );
+  const [selectedMetalColor, setSelectedMetalColor] = useState(product.metals[0]);
 
   // Map metal names to safe CSS class identifiers
   const getMetalThemeClass = (metal) => {
@@ -30,21 +28,27 @@ export default function ProductCard({
 
   return (
     <div className="product-card-container" id={`product-card-${product.id}`}>
+      
       {/* 1. Badge stickers */}
       <div className="badges-stack">
         {product.isCanadianMined && (
-          <span className="badge-item ethical-badge">💎 Ethical Sourced</span>
+          <span className="badge-item ethical-badge">
+            💎 Ethical Sourced
+          </span>
         )}
         {product.isBestSeller && (
-          <span className="badge-item bestseller-badge">🔥 Best Seller</span>
+          <span className="badge-item bestseller-badge">
+            🔥 Best Seller
+          </span>
         )}
         {product.isNewArrival && (
-          <span className="badge-item arrival-badge">New Arrival</span>
+          <span className="badge-item arrival-badge">
+            New Arrival
+          </span>
         )}
         {product.originalPrice && product.originalPrice > product.price && (
           <span className="badge-item discount-badge">
-            Save{" "}
-            {formatCurrency(product.originalPrice - product.price, currency)}
+            Save {formatCurrency(product.originalPrice - product.price, currency)}
           </span>
         )}
       </div>
@@ -57,21 +61,23 @@ export default function ProductCard({
         }}
         className="wishlist-absolute-btn"
         id={`heart-btn-${product.id}`}
-        aria-label="Add to Wishlist">
-        <Heart
-          className={`wishlist-heart-icon ${isWishlisted ? "filled-active" : ""}`}
-        />
+        aria-label="Add to Wishlist"
+      >
+        <Heart className={`wishlist-heart-icon ${isWishlisted ? "filled-active" : ""}`} />
       </button>
 
       {/* 3. Image Showcase Area */}
-      <div onClick={handleCardClick} className="product-image-frame">
+      <div 
+        onClick={handleCardClick}
+        className="product-image-frame"
+      >
         <img
           src={product.images[0]}
           alt={product.name}
           referrerPolicy="no-referrer"
           className="product-image-shown"
         />
-
+        
         {/* Soft overlay action hint */}
         <div className="hover-configure-reveal">
           <span className="hover-configure-text">
@@ -84,11 +90,7 @@ export default function ProductCard({
       <div className="product-details-block">
         {/* Collection & Rating Row */}
         <div className="collection-row">
-          <span>
-            {product.collection
-              ? `${product.collection} Line`
-              : "Paris Essentials"}
-          </span>
+          <span>{product.collection ? `${product.collection} Line` : "Paris Essentials"}</span>
           <div className="rating-inline">
             <Star className="collection-star-icon" />
             <span className="rating-number-score">{product.rating}</span>
@@ -96,7 +98,10 @@ export default function ProductCard({
         </div>
 
         {/* Product Name */}
-        <h3 onClick={handleCardClick} className="product-name-heading">
+        <h3 
+          onClick={handleCardClick}
+          className="product-name-heading"
+        >
           {product.name}
         </h3>
 
@@ -133,7 +138,9 @@ export default function ProductCard({
                 {formatCurrency(product.originalPrice, currency)}
               </span>
             )}
-            <span className="currency-tag-badge">{currency || "CAD"}</span>
+            <span className="currency-tag-badge">
+              {currency || "CAD"}
+            </span>
           </div>
         </div>
       </div>

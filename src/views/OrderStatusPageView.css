@@ -1,0 +1,878 @@
+/* Premium Custom Styles representing Paris Jewellers styling details for OrderStatusPageView */
+
+.order-workspace-container {
+  max-width: 1152px; /* 6xl style */
+  margin: 48px auto;
+  padding: 0 16px;
+  box-sizing: border-box;
+}
+
+@media (min-width: 640px) {
+  .order-workspace-container {
+    padding: 0 24px;
+  }
+}
+
+/* Page Header Title */
+.order-main-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.order-subtitle {
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: #c3a475;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.order-title {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 32px;
+  line-height: 1.25;
+  color: #23221f;
+  margin: 0;
+}
+
+@media (min-width: 640px) {
+  .order-title {
+    font-size: 36px;
+  }
+}
+
+.order-desc {
+  font-size: 12px;
+  color: #71717a;
+  font-weight: 500;
+  max-width: 448px;
+  margin: 8px auto 0;
+  line-height: 1.6;
+}
+
+.order-divider {
+  width: 48px;
+  height: 1px;
+  background-color: #c3a475;
+  margin: 16px auto 0;
+}
+
+/* Two Column Grid Setup */
+.order-layout-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  align-items: start;
+}
+
+@media (min-width: 1024px) {
+  .order-layout-grid {
+    grid-template-columns: repeat(12, 1fr);
+  }
+}
+
+/* Left Tracking Module */
+.order-tracking-column {
+  background-color: #ffffff;
+  border: 1px solid #e6dfd3;
+  padding: 24px;
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+@media (min-width: 640px) {
+  .order-tracking-column {
+    padding: 32px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .order-tracking-column {
+    grid-column: span 8;
+  }
+}
+
+.order-accent-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background-color: #c3a475;
+}
+
+.order-tracking-title {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #23221f;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+}
+
+.order-tracking-intro {
+  font-size: 12px;
+  color: #71717a;
+  font-weight: 500;
+  margin: -24px 0 0 0;
+}
+
+.order-tracking-intro strong {
+  color: #c3a475;
+  font-weight: 700;
+  user-select: all;
+}
+
+/* Search Form Panel */
+.tracker-search-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+@media (min-width: 640px) {
+  .tracker-search-form {
+    flex-direction: row;
+  }
+}
+
+.tracker-input-wrapper {
+  position: relative;
+  flex: 1;
+}
+
+.tracker-input-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  color: #c3a475;
+  pointer-events: none;
+}
+
+.tracker-input-field {
+  width: 100%;
+  height: 44px;
+  padding-left: 40px;
+  padding-right: 16px;
+  border: 1px solid #e6dfd3;
+  background-color: #faf9f6;
+  font-size: 12px;
+  font-weight: 600;
+  color: #23221f;
+  outline: none;
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+}
+
+.tracker-input-field:focus {
+  border-color: #c3a475;
+  background-color: #ffffff;
+}
+
+.tracker-search-btn {
+  height: 44px;
+  padding: 0 24px;
+  background-color: #23221f;
+  color: #ffffff;
+  border: none;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+}
+
+.tracker-search-btn:hover {
+  background-color: #c3a475;
+}
+
+.tracker-error-text {
+  font-size: 12px;
+  color: #dc2626;
+  font-weight: 500;
+  margin: -20px 0 0 0;
+  text-align: left;
+}
+
+/* quick select matching logged user profiles */
+.tracker-not-selected-box {
+  background-color: #faf7f2;
+  border: 1px solid #e6dfd3;
+  padding: 16px;
+  border-radius: 2px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.tracker-not-selected-box-p {
+  font-size: 12px;
+  font-weight: 500;
+  color: #23221f;
+  margin: 0 0 12px 0;
+}
+
+.tracker-quick-select-panel {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+}
+
+.tracker-quick-select-btn {
+  padding: 6px 12px;
+  background-color: #ffffff;
+  border: 1px solid #c3a475;
+  color: #23221f;
+  font-size: 10px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.tracker-quick-select-btn:hover {
+  background-color: #23221f;
+  border-color: #23221f;
+  color: #ffffff;
+}
+
+/* Tracking results node display */
+.tracker-details-area {
+  border-top: 1px solid #f2ece2;
+  padding-top: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.tracker-result-header {
+  display: flex;
+  flex-direction: column;
+  background-color: #faf9f6;
+  border: 1px solid #f2ece2;
+  padding: 16px;
+  box-sizing: border-box;
+  text-align: left;
+  gap: 16px;
+}
+
+@media (min-width: 640px) {
+  .tracker-result-header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.tracker-header-info span {
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  color: #a1a1aa;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.tracker-header-info h4 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #c3a475;
+  margin: 0;
+}
+
+.tracker-header-info p {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 10px;
+  color: #71717a;
+  margin: 4px 0 0 0;
+}
+
+.tracker-stage-badge {
+  background-color: #ecfdf5;
+  color: #065f46;
+  border: 1px solid #d1fae5;
+  padding: 6px 12px;
+  border-radius: 2px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  user-select: none;
+}
+
+/* Graphic Stepper component */
+.tracker-stepper-container {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 8px 0;
+  box-sizing: border-box;
+}
+
+.tracker-stepper-line-bg {
+  position: absolute;
+  left: 0;
+  top: 22px;
+  right: 0;
+  height: 4px;
+  background-color: #e4e4e7;
+  z-index: 1;
+  border-radius: 9999px;
+}
+
+.tracker-stepper-line-fill {
+  height: 100%;
+  background-color: #c3a475;
+  transition: width 1s ease-in-out;
+  border-radius: 9999px;
+}
+
+.step-node {
+  position: relative;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  text-align: center;
+  user-select: none;
+}
+
+.step-bubble {
+  width: 44px;
+  height: 44px;
+  border-radius: 9999px;
+  border-width: 2px;
+  border-style: solid;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 1px 3px rgba(35, 34, 31, 0.05);
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+.step-bubble-active {
+  border-color: #c3a475;
+  color: #c3a475;
+}
+
+.step-bubble-inactive {
+  border-color: #e4e4e7;
+  color: #d1d1d6;
+}
+
+.step-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-top: 8px;
+}
+
+.step-label-active {
+  color: #23221f;
+}
+
+.step-label-inactive {
+  color: #a1a1aa;
+}
+
+.step-description {
+  font-size: 8px;
+  color: #a1a1aa;
+  max-width: 80px;
+  line-height: 1.3;
+  margin-top: 2px;
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .step-description {
+    display: inline;
+  }
+}
+
+/* Order Specifications Layout grids */
+.tracker-specs-area {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  border-top: 1px solid #f2ece2;
+  padding-top: 24px;
+}
+
+@media (min-width: 768px) {
+  .tracker-specs-area {
+    grid-template-columns: repeat(12, 1fr);
+  }
+}
+
+.tracker-specs-product {
+  display: flex;
+  gap: 16px;
+}
+
+@media (min-width: 768px) {
+  .tracker-specs-product {
+    grid-column: span 5;
+  }
+}
+
+.tracker-product-image {
+  width: 96px;
+  height: 96px;
+  object-fit: cover;
+  border: 1px solid #e6dfd3;
+  padding: 4px;
+  background-color: #ffffff;
+  box-sizing: border-box;
+  flex-shrink: 0;
+}
+
+.tracker-product-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  text-align: left;
+}
+
+.tracker-product-tag {
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-weight: 800;
+  color: #c3a475;
+}
+
+.tracker-product-title {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: #23221f;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.tracker-product-sub {
+  font-size: 10px;
+  color: #71717a;
+  font-weight: 600;
+  margin: 0;
+}
+
+.tracker-product-value {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #c3a475;
+  margin: 4px 0 0 0;
+}
+
+/* Delivery Specifications Info Block */
+.tracker-specs-details {
+  background-color: #faf9f6;
+  border: 1px solid #f2ece2;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+  .tracker-specs-details {
+    grid-column: span 7;
+  }
+}
+
+.tracker-spec-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #23221f;
+  font-weight: 500;
+  border-bottom: 1px solid #f2ece2;
+  padding-bottom: 6px;
+}
+
+.tracker-spec-row:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.tracker-spec-row-label {
+  color: #71717a;
+}
+
+.tracker-spec-row-value {
+  text-align: right;
+  font-weight: 700;
+}
+
+.tracker-spec-row-value.accent-gold {
+  color: #c3a475;
+}
+
+.tracker-empty-search {
+  border-top: 1px solid #f2ece2;
+  padding-top: 32px;
+  text-align: center;
+  padding-bottom: 24px;
+  color: #a1a1aa;
+}
+
+.tracker-empty-search-p {
+  font-size: 12px;
+  font-style: italic;
+  font-weight: 500;
+  margin: 0;
+}
+
+/* Right Profile Dashboard Column */
+.order-profile-column {
+  background-color: #ffffff;
+  border: 1px solid #e6dfd3;
+  padding: 24px;
+  position: relative;
+  box-sizing: border-box;
+}
+
+@media (min-width: 1024px) {
+  .order-profile-column {
+    grid-column: span 4;
+  }
+}
+
+/* Active Profile Panel elements */
+.member-profile-active {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  text-align: left;
+}
+
+.member-profile-header {
+  text-align: center;
+  border-bottom: 1px solid #f2ece2;
+  padding-bottom: 16px;
+}
+
+.member-avatar {
+  width: 56px;
+  height: 56px;
+  background-color: #faf7f2;
+  border: 1px solid #c3a475;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #c3a475;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0 auto 8px;
+  box-shadow: 0 1px 3px rgba(35, 34, 31, 0.05);
+}
+
+.member-badge {
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 800;
+  color: #c3a475;
+  display: block;
+}
+
+.member-name {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #23221f;
+  margin: 4px 0 0 0;
+}
+
+.member-email {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 10px;
+  color: #71717a;
+  margin: 2px 0 0 0;
+}
+
+.member-summary-box {
+  font-size: 12px;
+  background-color: #faf7f2;
+  border: 1px solid #f2ece2;
+  padding: 12px;
+  border-radius: 2px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: #23221f;
+  font-weight: 500;
+  box-sizing: border-box;
+}
+
+.member-summary-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.member-summary-label {
+  color: #a1a1aa;
+}
+
+.member-summary-value {
+  font-weight: 700;
+}
+
+.member-summary-value.accent-gold {
+  color: #c3a475;
+}
+
+.member-summary-value.accent-green {
+  color: #047857;
+}
+
+/* Member Orders Listing History */
+.member-orders-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.member-orders-headline {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-weight: 800;
+  color: #23221f;
+  margin: 0;
+}
+
+.member-history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-height: 220px;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+.member-history-item {
+  padding: 12px;
+  border: 1px solid #e6dfd3;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.member-history-item-active {
+  background-color: #23221f;
+  border-color: #23221f;
+  color: #ffffff;
+}
+
+.member-history-item-inactive {
+  background-color: #ffffff;
+}
+
+.member-history-item-inactive:hover {
+  background-color: #fafbfc;
+}
+
+.history-item-details-left {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.history-item-no {
+  font-size: 10px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.history-item-product {
+  font-size: 9px;
+  color: #8e8e93;
+  margin: 0;
+}
+
+.history-item-details-right {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.history-item-price {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 11px;
+  font-weight: 700;
+  color: #c3a475;
+  margin: 0;
+}
+
+.history-item-status {
+  font-size: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 800;
+  font-family: "JetBrains Mono", monospace;
+  margin: 0;
+}
+
+.history-item-status-active {
+  color: #c3a475;
+}
+
+.history-item-status-inactive {
+  color: #059669;
+}
+
+.member-empty-history-box {
+  border: 1px dashed #e6dfd3;
+  padding: 16px;
+  text-align: center;
+  border-radius: 2px;
+  box-sizing: border-box;
+}
+
+.member-empty-history-p {
+  font-size: 10px;
+  font-style: italic;
+  color: #a1a1aa;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Close member session interactive elements */
+.close-session-btn {
+  width: 100%;
+  height: 40px;
+  border: 1px solid #fca5a5;
+  background-color: #ffffff;
+  color: #dc2626;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+}
+
+.close-session-btn:hover {
+  background-color: #fef2f2;
+}
+
+/* Inactive login gateway selector */
+.member-profile-inactive {
+  text-align: center;
+  padding: 32px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+}
+
+.profile-lock-avatar {
+  width: 48px;
+  height: 48px;
+  background-color: #faf7f2;
+  border: 1px solid #e6dfd3;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #c3a475;
+  margin-bottom: 8px;
+  box-shadow: 0 1px 3px rgba(35, 34, 31, 0.05);
+}
+
+.profile-lock-title {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #23221f;
+  margin: 0;
+}
+
+.profile-lock-desc {
+  font-size: 12px;
+  color: #71717a;
+  line-height: 1.6;
+  font-weight: 500;
+  margin: 0;
+}
+
+.profile-login-action-btn {
+  width: 100%;
+  height: 40px;
+  background-color: #23221f;
+  color: #ffffff;
+  border: none;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+}
+
+.profile-login-action-btn:hover {
+  background-color: #c3a475;
+}
+
+.profile-register-switch {
+  font-size: 10px;
+  color: #a1a1aa;
+  font-weight: 500;
+  margin: 0;
+}
+
+.profile-register-btn {
+  background: none;
+  border: none;
+  color: #c3a475;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.profile-register-btn:hover {
+  text-decoration: underline;
+}

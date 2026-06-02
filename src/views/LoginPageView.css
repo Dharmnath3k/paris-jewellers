@@ -1,0 +1,250 @@
+/* Premium Custom Styles representing Paris Jewellers styling details for LoginPageView */
+
+.login-container {
+  max-width: 448px;
+  margin: 64px auto;
+  padding: 40px 24px;
+  background-color: #ffffff;
+  border: 1px solid #e6dfd3;
+  box-shadow: 0 10px 25px -5px rgba(35, 34, 31, 0.05);
+  position: relative;
+  box-sizing: border-box;
+}
+
+.login-accent-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background-color: #c3a475;
+}
+
+.login-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.login-subtitle {
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: #c3a475;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.login-title {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 28px;
+  font-weight: 500;
+  color: #23221f;
+  margin: 0;
+}
+
+.login-divider {
+  width: 48px;
+  height: 1px;
+  background-color: #c3a475;
+  margin: 12px auto 0;
+}
+
+/* Warnings and Alerts */
+.login-error-alert {
+  padding: 12px;
+  background-color: #fef2f2;
+  border-left: 3px solid #ef4444;
+  font-size: 12px;
+  color: #991b1b;
+  margin-bottom: 24px;
+  font-weight: 500;
+  text-align: left;
+}
+
+.login-success-alert {
+  padding: 12px;
+  background-color: #ecfdf5;
+  border-left: 3px solid #10b981;
+  font-size: 12px;
+  color: #065f46;
+  margin-bottom: 24px;
+  font-weight: 500;
+  text-align: left;
+}
+
+/* Form layouts */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.login-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  text-align: left;
+}
+
+.login-form-label {
+  font-size: 11px;
+  font-weight: 600;
+  color: #23221f;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  display: block;
+}
+
+.login-input-wrapper {
+  position: relative;
+}
+
+.login-input-icon {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  color: #c3a475;
+  pointer-events: none;
+}
+
+.login-input-field {
+  width: 100%;
+  height: 44px;
+  padding-left: 42px;
+  padding-right: 16px;
+  border: 1px solid #e6dfd3;
+  background-color: #faf9f6;
+  font-size: 12px;
+  font-weight: 600;
+  color: #23221f;
+  outline: none;
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+}
+
+.login-input-field:focus {
+  border-color: #c3a475;
+  background-color: #ffffff;
+}
+
+.login-input-field::placeholder {
+  color: #a1a1aa;
+}
+
+.login-password-field {
+  letter-spacing: 0.2em;
+}
+
+/* Submit Interactive Trigger */
+.login-submit-btn {
+  width: 100%;
+  height: 44px;
+  background-color: #23221f;
+  color: #ffffff;
+  border: none;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-top: 8px;
+  box-sizing: border-box;
+}
+
+.login-submit-btn:hover {
+  background-color: #c3a475;
+}
+
+/* Footer structure and registry redirect */
+.login-footer {
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 1px solid #f2ece2;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.login-switch-text {
+  font-size: 12px;
+  color: #71717a;
+  font-weight: 500;
+  margin: 0;
+}
+
+.login-switch-btn {
+  background: none;
+  border: none;
+  color: #c3a475;
+  font-weight: 700;
+  text-decoration: underline;
+  cursor: pointer;
+  transition: color 0.15s ease;
+}
+
+.login-switch-btn:hover {
+  color: #b08f5e;
+}
+
+/* Demo portal helper credentials block */
+.login-demo-box {
+  background-color: #faf7f2;
+  border: 1px solid #e6dfd3;
+  padding: 16px;
+  text-align: left;
+  border-radius: 2px;
+  box-sizing: border-box;
+}
+
+.login-demo-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 12px;
+  font-weight: 700;
+  color: #c3a475;
+  margin-bottom: 6px;
+}
+
+.login-demo-desc {
+  font-size: 10px;
+  color: #52525b;
+  line-height: 1.5;
+  margin: 0 0 10px 0;
+}
+
+.login-demo-credentials {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 10px;
+  color: #3f3f46;
+  background-color: #ffffff;
+  padding: 10px;
+  border: 1px solid #f2ece2;
+  border-radius: 2px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.login-ssl-seal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-size: 10px;
+  color: #a1a1aa;
+  font-family: "JetBrains Mono", monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
